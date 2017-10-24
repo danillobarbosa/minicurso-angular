@@ -1,4 +1,6 @@
-import { HomeModule } from './home/home.module';
+import { ContatoModule } from './contato/contato.module';
+import { ContatoComponent } from './contato/contato.component';
+import { HomeModule } from "./home/home.module";
 import { Routes } from "@angular/router";
 import { RouterModule } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
@@ -8,9 +10,13 @@ import { AppComponent } from "./app.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NavbarModule } from "./navbar/navbar.module";
 import { HomeComponent } from "./home/home.component";
-import { SobreComponent } from './sobre/sobre.component';
+import { SobreComponent } from "./sobre/sobre.component";
 
-const routes: Routes = [{ path: "", component: HomeComponent }, {path: 'sobre', component: SobreComponent}];
+const routes: Routes = [
+  { path: "", component: HomeComponent },
+  { path: "sobre", component: SobreComponent },
+  {path: 'contato', component: ContatoComponent}
+];
 
 @NgModule({
   declarations: [AppComponent, SobreComponent],
@@ -18,6 +24,7 @@ const routes: Routes = [{ path: "", component: HomeComponent }, {path: 'sobre', 
     BrowserModule,
     NavbarModule,
     HomeModule,
+    ContatoModule,
     RouterModule.forRoot(routes),
     NgbModule.forRoot()
   ],
