@@ -2,7 +2,7 @@ import { HomeModule } from './home/home.module';
 import { Routes } from "@angular/router";
 import { RouterModule } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, LOCALE_ID } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";

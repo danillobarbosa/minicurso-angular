@@ -1,3 +1,13 @@
-<p>
-  card-post works!
-</p>
+<div class="col-sm-6 col-12">
+
+  <div class="card mb-2 " style="width: 20rem;">
+    <img class="card-img-top" [src]="post.pic_src" [alt]="post.pic_caption">
+    <div class="card-body">
+      <small class="text-muted">{{converterData(post.modified) | date: 'dd/mm/yyyy'}}</small>
+      <h4 class="card-title">{{post.headline}}</h4>
+      <p class="card-text">{{post.kicker}}</p>
+      <a [href]="post.url" class="btn btn-primary">Ver mais</a>
+    </div>
+  </div>
+
+</div>
