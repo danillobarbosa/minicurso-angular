@@ -10,12 +10,12 @@
 
         <div class="form-group">
           <label for="nome">Nome</label>
-          <input type="text" class="form-control" name="nome" formControlName="nome" placeholder="Informe seu nome">
+          <input [ngClass]="{'is-invalid': contato.controls.nome.invalid && contato.controls.nome.dirty}" type="text" class="form-control" name="nome" formControlName="nome" placeholder="Informe seu nome">
         </div>
 
         <div class="form-group">
           <label for="telefone">Telefone</label>
-          <input type="text" class="form-control" name="telefone" formControlName="telefone" placeholder="(00) 0000-0000">
+          <input [ngClass]="{'is-invalid': contato.controls.telefone.invalid && contato.controls.telefone.dirty}" type="text" class="form-control" name="telefone" formControlName="telefone" placeholder="(00) 0000-0000">
         </div>
 
         <div class="form-group">
@@ -23,7 +23,7 @@
           <textarea type="text" class="form-control" name="mensagem" formControlName="mensagem" placeholder="Digite sua mensagem..."></textarea>
         </div>
 
-        <button class="btn btn-primary" type="submit">Enviar</button>
+        <button [disabled]="contato.invalid" class="btn btn-primary" type="submit">Enviar</button>
       </form>
 
       {{contato.valid}}
